@@ -1,0 +1,5 @@
+python 10
+pip install cmake
+pip install "C:\Users\carlos\Desktop\Dlib-python whl packages\Dlib-python whl packages\dlib-19.22.99-cp310-cp310-win_amd64.whl"
+pip install face_recognition
+pip install opencv-python
