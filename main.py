@@ -1,16 +1,29 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import tkinter as tk
+import util
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class App:
+    def __init__(self):
+        self.main_window = tk.Tk()
+        self.main_window.geometry("1200x520+350+100")
+
+        self.login_button_main_window = util.get_button(self.main_window, "login", "green", self.login)
+        self.login_button_main_window.place(x=750, y=300)
+
+        self.register_new_user_button_main_window = util.get_button(self.main_window, "Nuevo usuario", "gray",
+                                                                    self.register_new_user, fg="black")
+        self.register_new_user_button_main_window.place(x=750, y=400)
+
+    def login(self):
+        pass
+
+    def register_new_user(self):
+        pass
+
+    def start(self):
+        self.main_window.mainloop()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    app = App()
+    app.start()
